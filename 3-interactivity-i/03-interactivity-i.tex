@@ -9,6 +9,8 @@
 \usepackage{listings}
 \usepackage{enumitem}
 
+
+
 % No numbering
 \setcounter{secnumdepth}{0}
 
@@ -51,6 +53,7 @@
   breakatwhitespace,
 }
 
+
 \title{ Labb 2 -- Pixelgrafik }
 
 \author{ Multimedia 7.5 hp VT-14 }
@@ -62,7 +65,7 @@
 
 
 \section{Introduktion}
-I denna laboration kommer vi att arbeta med pixelgrafik ur två aspekter. Först genom att manuellt skapa pixelgrafik med hjälp av HTML-elementet canvas och sedan genom att arbeta med programmet \emph{Adobe Photoshop}.
+I denna laboration kommer vi att arbeta med javascript för att skapa interaktivitet. Tanken med laborationen är att vi kommer att befästa och lära oss javascript, html och css parallelt. Vi förväntar oss att ni har goda kunskaper i programmering och att inläsning på iteration, selektion, variabler och metoder görs innan. 
 
 \section{Inlämning}
 Denna laboration består av tre faser där du ska lämna in varje fas i en egen mapp. Din inlämning ska alltså bestå av en .zip-fil eller .rar-fil (inga andra komprimeringsformat är tillåtna!) innehållandes följande (med följande struktur):
@@ -72,10 +75,9 @@ Denna laboration består av tre faser där du ska lämna in varje fas i en egen 
       \begin{itemize}
         \item uppgift1 (mapp)
           \begin{itemize}
-            \item uppgift.js (din)
-            \item pattern1.png (som du utgick ifrån)
-            \item pattern2.png (som du utgick ifrån)
-            \item pattern3.png (som du utgick ifrån)
+            \item Hello.js 
+            \item index.html
+      
           \end{itemize}
 
         \item uppgift2 (mapp)
@@ -102,8 +104,33 @@ Nedan följer uppgifterna som resulterar i inlämningarna ovan.
 
 
 
-  \exercise{Hello <name>}
-  Denna övning går ut på att göra (nästan) exakt samma sak som i förra övningen, fast nu genom att använda programmet \emph{Adobe Photoshop}.
+  \exercise{Hej! \emph{Namn}}
+ I denna uppgift skall ni skapa ett formulär i HTML som kan med hjälp av javascript läsa in från textboxen och sedan säga Hej + \emph {textboxens värde} 
+Alltså kommer ert formulär se ut som nedanstående: 
+\\ \\
+Skriv in ditt namn: \fcolorbox{black}{white}{ \emph Namn...} \\ 
+\colorbox{gray}{ \large\bf OK }
+\\
+
+  \begin{enumerate}
+    \item Börja med att skapa en .html-fil där du skapar upp ett skal för din html. 
+    \item Skapa sedan en .js-fil där ni kommer att skapa metoder som ni behöver. 
+    \item Skapa sedan en .cc-fil där all formatering skall finnas! 
+    \item Försök nu skapa de element ni behöver, alltså ett inputfält och en knapp.  
+    \item Försök nu att endast få er knapp att skriva ut något på skärmen, förslagsvis med en alert()
+   \item nästa steg är att försöka läsa in från textboxen och få ut detta i en alertbox. Klar! 
+ \end{enumerate}
+
+
+  \paragraph{Tips och tricks}
+    \begin{itemize}
+      \item För att skapa din kod direkt i webbläsaren istället för filerna använd: \href{http://jsfiddle.net/}{jsfiddle}. Observera dock att ni sedan måste länka ihop era filer senare.
+      \item 
+    \end{itemize}
+
+
+
+
 
 
   \exercise{Slumpmässig färg}
