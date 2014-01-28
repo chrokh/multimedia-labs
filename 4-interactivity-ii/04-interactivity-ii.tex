@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc} % åäö
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+
+
+
+% No numbering
+\setcounter{secnumdepth}{0}
+
+% Counters for tasks & questions
+\newcounter{taskcounter}
+\setcounter{taskcounter}{0}
+\newcounter{stepcounter}
+\setcounter{stepcounter}{0}
+\newcounter{questioncounter}
+\setcounter{questioncounter}{0}
+
+% Exercises
+\newcommand{\exercise}[1]{
+  \refstepcounter{taskcounter}
+  \addcontentsline{toc}{subsection}{Uppgift \thetaskcounter{} #1}
+  \vspace{1em}~
+  \\\normalfont{\large{\bfseries{\hspace{0.5em}Uppgift \thetaskcounter \hspace{1em}#1}}}\\\\
+}
+
+% Remove date
+\date{}
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor = blue,
+  citecolor = red
+}
+
+\lstset{
+  language=[Sharp]C,
+  basicstyle=\color[rgb]{0.3,0.3,0.3}\ttfamily,
+  keywordstyle=\color[rgb]{0,0.5,0.5},
+  numberstyle=\color[rgb]{0.7,0.7,0.7},
+  commentstyle=\color[rgb]{0.1,0.5,0.1},
+  stringstyle=\color[rgb]{0.6,0.1,0.5},
+  backgroundcolor=\color[rgb]{0.95,0.95,0.95},
+  showstringspaces=false,
+  numbers=left,
+  breaklines,
+  breakatwhitespace,
+}
+
+
+\title{ Labb 4 -- Interaktivitet II }
+
+\author{ Multimedia 7.5 hp VT-14 }
+\begin{document}
+\maketitle
+\vspace{-2em}
+%\tableofcontents
+
+
+
+\section{Introduktion}
+I denna laboration kommer vi att arbeta mer med javascript för att skapa interaktivitet. Tanken är nu att vi fördjupar oss i alla delarna javascript, html och css. När man jobbar med nya tekniker gäller alltid att man behöver ibland gå tillbaka och aktivt söka information. 
+
+\section{Inlämning}
+Din inlämning ska bestå av en .zip-fil eller .rar-fil (inga andra komprimeringsformat är tillåtna!) innehållandes följande (med följande struktur):
+  \begin{itemize}
+    \item labb2\_fornamn\_efternamn.zip
+
+      \begin{itemize}
+        \item uppgift1 (mapp)
+          \begin{itemize}
+            \item grid.js 
+            \item index.html
+	    \item grid.css
+          \end{itemize}
+        \item uppgift2 (mapp)
+          \begin{itemize}
+            \item randomizer.js
+            \item index.html
+          \end{itemize}
+	      \item uppgift3 (mapp)
+          \begin{itemize}
+            \item menu.js
+            \item menu.css
+            \item index.html
+          \end{itemize}
+    \end{itemize}
+  \end{itemize}
+
+  
+  \subsection{Kodstandard}
+    \begin{itemize}
+      \item Ingen Javascript eller CSS ska placeras ``inline'' i något htmldokument. All javascriptkod skall alltså skrivas i \texttt{.js}-filer och css i \texttt{.css}-filer.
+      \item All kod ska vara korrekt indenterad! (Läs mer om indentering på \href{http://htmlhunden.se}{htmlhunden} om du är osäker)
+    \end{itemize}
+
+
+\pagebreak
+\section{Uppgifter}
+Nedan följer uppgifterna som resulterar i inlämningarna ovan.
+
+
+
+  \exercise{Rutnät av bilder}
+ I denna uppgift skall ni skapa en sida som har ett rutnät/schackbräde av bilder. Bilder finns att hämta \href{http://http://placekitten.com/}{här} och HÄR OSV. 
+
+
+  \begin{enumerate}
+    \item Börja med att skapa en .html-fil 
+    \item Skapa sedan en \texttt{.js}-fil där du kommer att skapa metoder som du behöver. 
+    \item Skapa sedan en \texttt{.css}-fil där all formatering skall finnas! 
+ \end{enumerate}
+
+
+  \paragraph{Krav}
+    \begin{itemize}
+      \item Rutnätet skall göras dynamiskt, det är alltså inte ok att skapa ett rutnät som är av en fix storlek utan rutnätet skall skapas med javaskript.
+     \item Sidan skall vara skalbar och med det menas att om fönstret blir mindre så skall bilderna anpassas efter det. 
+    \end{itemize}
+
+
+
+
+
+
+  \exercise{Slumpmässig färg}
+  I denna övning ska vi träna på att förändra CSS-egenskaper genom JavaScript. Målet är en helt tom sida med en knapp/länk. När man trycker på länken så ska hela sidans bakgrundsfärg ändras. En ny bakgrundsfärg ska slumpas fram vid varje knapptryckning.
+
+  Tänk på att den här uppgiften kan delas upp i (t.ex.) följande delprpblem:
+
+  \begin{itemize}
+    \item ``Lyssna'' på knapptryckningen
+    \item Slumpa fram tal
+    \item Slumpa fram en färg
+    \item Ändra bakgrundsfärgen
+  \end{itemize}
+
+  Tips: Det kan underlätta att sätta färgerna genom \texttt{rgb(x,y,z)} istället för att använda hexadecimal notation (e.g. \#333333).
+
+
+
+
+\exercise{Interaktiv meny}
+  Denna övning ger dig lite större frihet än de tidigare. Målet med denna övning är att producera en \texttt{.html}-sida innehållandes tre menyknappar. Sidan ska även innehålla tre informationsrutor (ex. \texttt{<div>:ar}). När sidan laddas ska alla informationsrutorna utom den första vara dold. När användaren sedan klickar på respektive meny-knapp så ska respektive informationsruta visas, och övriga döljas.
+
+  \paragraph{}
+  Endast seriösa försök beaktas som inlämningar. Skapa en vision i ditt huvud kring hur sidan borde se ut för att på lättast möjliga sätt kommunicera sitt syfte (navigationen) till användaren och exekvera din vision med hjälp av \texttt{css}.
+
+  \paragraph{}
+  Tips: Försök att, precis som i förra uppgiften, bryta upp problemet i delproblem, och använd dig av funktioner för att strukturera din Javascript-kod!
+
+
+
+
+
+
+\end{document}
