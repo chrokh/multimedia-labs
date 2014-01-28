@@ -103,30 +103,29 @@ Nedan följer uppgifterna som resulterar i inlämningarna ovan.
 
 
 
-  \exercise{}
 
+  \exercise{Generella event-handlers}
+  Denna första uppgift går mest ut på att förbereda dig inför nästa. Uppgiften går ut på att skriva en generellare \texttt{event handler}. En \texttt{event handler} är alltså en funktion som körs när ett \texttt{event} avfyras.
 
+  \paragraph{}
+  Uppgiften går ut på att vi ska skapa ett antal knappar med olika texter. När användaren klickar på en av knapparna, ska texten för denna knapp visas upp på en annan plats på sidan, exempelvis i en \texttt{<p>}-tagg.
 
-  \exercise{Rutnät av bilder}
- I denna uppgift skall ni skapa en sida som har ett rutnät/schackbräde av bilder. Bilder finns att hämta \href{http://http://placekitten.com/}{här} och HÄR OSV. 
-
-
+  \paragraph{Förslag på tillvägagångssätt}
   \begin{enumerate}
-    \item Börja med att skapa en .html-fil 
-    \item Skapa sedan en \texttt{.js}-fil där du kommer att skapa metoder som du behöver. 
-    \item Skapa sedan en \texttt{.css}-fil där all formatering skall finnas! 
- \end{enumerate}
+    \item Skapa en HTML, en CSS, en JS-fil, och ``koppla ihop'' dem.
+    \item Skapa ett antal (minst tre) knappar (t.ex. med \texttt{<a>}-element) med olika text, i HTML:en.
+    \item Skapa en placeholder för knapp-texten (t.ex. ett \texttt{<p>}-element) där texten för den klickade knappen ska visas.
+    \item Applicera m.h.a. \texttt{jQuery} en \texttt{event listener} för klick-eventet på alla dessa knappar. Låt alla knapparna använda samma \texttt{event handler}
+    \item Det finns med \texttt{jQuery} flera sätt att, i en \texttt{event handler}, avgöra vilket element som har avfyrat ett \texttt{event}. Sök rätt på något och se till att texten för respektive knapp visas.
+  \end{enumerate}
 
-
-  \paragraph{Krav}
-    \begin{itemize}
-      \item Rutnätet skall göras dynamiskt, det är alltså inte ok att skapa ett rutnät som är av en hårdkodad storlek. Således kan det t.ex. vara bra att abstrahera ditt program till en metod som du förslagsvis kallar \texttt{drawGrid} och som tar två siffror: \texttt{rows} och \texttt{cols}. Ditt rutnät ska alltså kunna skapas som 2x2 såväl som 20x30.
-     \item Rutnätet ska alltid täcka 100\% av fönstrets bredd och 100\% av fönstrets höjd.
-    \end{itemize}
+  \paragraph{Krav:}
+  Du får i denna uppgift alltså bara använda en enda \texttt{event handler}.
 
 
 
 
+  \pagebreak
   \exercise{Spelet Memory}
   Denna uppgift går ut på att skapa en enklare variant av spelet memory. Spelplanen består av ett antal bilder, i par. Spelet går ut på att man ska välja två bilder, om de två bilderna är likadana så får man ta bort dem ifrån spelplanen. När alla bilder är borta ifrån spelplanen är spelet över och man har vunnit!
 
