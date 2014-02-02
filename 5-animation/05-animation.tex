@@ -126,7 +126,18 @@ Nedan följer uppgifterna som resulterar i inlämningarna ovan.
   Exempel på vad som åsyftas kan du hitta \href{http://designshack.net/tutorialexamples/imagehovers/index.html}{här}.
 
   \exercise{CSS3 Animations}
-  TODO
+  I denna övning ska vi göra någonting helt nytt. Vi ska skapa en scrollande bakgrundsbild. På denna bakgrund ska vi sedan scrolla ytterligare (minst) ett objekt för att uppnå en \href{http://en.wikipedia.org/wiki/Parallax_scrolling}{parallaxeffekt}. Du väljer själv om din bakgrundsbild ska täcka hela skärmen, eller endast en liten del. Det är dock viktigt att du ser till sidan ser lika bra ut oavsett om man förstorar eller förminskar webbläsarfönstret.
+  \begin{enumerate}
+    \item Skapa ett \texttt{.html}-, ett \texttt{.css}-dokument och ``koppla in'' \texttt{css}:en.
+    \item Leta rätt på en bild på internet som kan fungera ``panorama-bakgrund'' **
+    \item Använd CSS-animations för låta bakgrunden scrolla i något led (x/y) för evigt.
+    \item Leta rätt på en bild som du vill applicera ovanpå bakgrunden.
+    \item Använd CSS-animations för att låta denna andra bild animeras i samma riktning som bakgrunden, fast snabbare, för att uppnå en parallaxeffekt.
+  \end{enumerate}
+
+  \paragraph{**} Egentligen skulle ju denna bild förstås behöva kunna ``sömlöst'' återupprepas i x-led för att ``sömmen'' som orsakas när man upprepar bilden inte ska vara uppenbar. Men detta är ok att ignorera vid denna övning. Fundera dock gärna på hur du skulle kunna uppnå en mindre uppenbar ``söm''.
+
+  \paragraph{Tips} Sätt din bakgrundsbild som \texttt{background} snarare än \texttt{src} i en \texttt{<img>}-tagg. Då kan du modifiera bildens \texttt{background-position} istället för att behöva flytta hela elementet. Om du har bilden som bakgrund kan du använda egenskapen \texttt{background-repeat} för att upprepa den i t.ex. x-led.
 
 
 \end{document}
