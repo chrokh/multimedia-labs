@@ -82,15 +82,15 @@ Din inlämning ska bestå av en .zip-fil eller .rar-fil (inga andra komprimering
           \end{itemize}
         \item \texttt{uppgift2} (mapp)
           \begin{itemize}
-            \item \texttt{index.html} (Din ljudhistoria exporterad till \texttt{mp3})
-            \item \texttt{video.css} (Din ljudhistoria exporterad till \texttt{ogg})
+            \item \texttt{index.html}
+            \item \texttt{video.css}
           \end{itemize}
     \end{itemize}
   \end{itemize}
 
   \subsection{Krav}
   \begin{itemize}
-    \item Videofilen \texttt{movie.mp4} skall alltså \textbf{endast} lämnas in i \texttt{uppgift 1}. I \texttt{uppgift 2} ska du referera till din vdeofil som ligger i mappen \texttt{uppgift1} genom \texttt{relativ länkning}.
+    \item Videofilen \texttt{movie.mp4} skall alltså \textbf{endast} lämnas in i \texttt{uppgift 1}. I \texttt{uppgift 2} ska du referera till dina videofiler som ligger i mappen \texttt{uppgift1} genom \texttt{relativ länkning}.
     \item All kod ska vara korrekt indenterad. Läs mer på \href{http://htmlhunden.se}{HTMLHunden} om du är osäker på hur man indenterar.
     \item Din videofil måste hålla \textbf{rimlig} filstorlek.
   \end{itemize}
@@ -133,8 +133,20 @@ Nedan följer uppgifterna som resulterar i inlämningarna ovan.
   Om du vill får du även arbeta med ljud i din trailer. Se dock då till att du även komprimerar ljudet när du exporterar filmen.
 
 
+  \pagebreak
   \exercise{Videodistribution -- HTML5}
-  TODO
+  Vi ska nu prova på ett sätt att bädda in video i webbsidor. Detta genom att använda oss av \texttt{HTML5}-elementet \texttt{<video>}.
+
+  \begin{enumerate}
+    \item Skapa en \texttt{.html}-, en \texttt{.css}-fil och ``koppla ihop dem''.
+    \item Använd \texttt{<video>}-elementet för att bädda in dina videofiler.
+  \end{enumerate}
+
+  \paragraph{Krav}
+  \begin{itemize}
+    \item Kom ihåg att ge båda versionerna (formaten) av din videofil som alternativ till \texttt{<video>}-elementet. Alltså både \texttt{.mp4} och \texttt{.ogg}.
+    \item Kom ihåg att du inte ska kopiera dina videofiler ifrån \texttt{uppgift 1} till denna uppgift. Utan istället ska du använda \texttt{relativa url}:er för att länka till filerna i mappen för \texttt{uppgift 1}.
+  \end{itemize}
 
 
 \end{document}
